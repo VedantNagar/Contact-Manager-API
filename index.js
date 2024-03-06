@@ -5,6 +5,7 @@ require('dotenv').config();
 //getting routes
 const contactRoute = require('./routes/contactRoute');
 //adding middleware
+app.use(express.json());
 app.use('/api/v1', contactRoute);
 const port = 5000 || process.env.PORT;
 const start = async () => {
